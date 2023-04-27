@@ -1,0 +1,9 @@
+<div class="row">
+    <div class="col-md-6">
+        <app-receipe-list (receipeEmitter) = "isClick($event)" ></app-receipe-list>
+    </div>
+    <div class="col-md-6">
+        <app-receipedetail [Receipe]="Receipe"></app-receipedetail>
+    </div>
+    
+</div>
