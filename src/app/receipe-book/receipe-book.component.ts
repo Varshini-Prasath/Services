@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { receipe } from './receipe-model';
 import { ReceipeService } from './receipeBook.service';
 
@@ -8,15 +8,14 @@ import { ReceipeService } from './receipeBook.service';
   styleUrls: ['./receipe-book.component.css'],
   providers : [ReceipeService]
 })
-export class ReceipeBookComponent {
+export class ReceipeBookComponent implements OnInit {
 
   constructor(private receipeservice : ReceipeService){};
 
-  Receipe : receipe = {name : '', description: '' , image : ''};
- 
-isClick(receipeEmitter : receipe)
-{
-      this.Receipe = receipeEmitter;
-      console.log(this.Receipe);
+  Receipe : receipe = {id:0, name : '', description: '' , image : '' , ingredients :[]};
+
+ngOnInit(){
+  this.receipeservice.receipeSelected.subscribe((receipe:receipe)=>(this.Receipe=receipe));
+
 }
 }

@@ -1,14 +1,14 @@
-<a href="#" class="list-group-item clearfix" (click)="isClick($event)">
+<a style="cursor: pointer;" class="list-group-item clearfix" (click)="isClick()">
         <div class="pull-left">
             <h4 class="list-group-item-heading" > {{ Receipe .name }} </h4>
             <p class = "list-group-item-text">{{Receipe.description}}</p>
         </div>
         <span class="pull-right">
-            <img 
+            <img
             src = "{{Receipe.image}}"
-            alt = " {{Receipe.name}}" 
-            class="image-responsive" 
-            style="min-height: 50px ;">
-        </span> 
+            alt = " {{Receipe.name}}"
+            class="image-responsive"
+            style="max-height: 70px ;">
+        </span>
 
     </a>

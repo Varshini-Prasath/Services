@@ -1,5 +1,6 @@
 import { Component , EventEmitter, Input, Output } from '@angular/core';
 import { receipe } from '../../receipe-model'
+import { ReceipeService } from '../../receipeBook.service';
 
 @Component({
   selector: 'app-receipe-item',
@@ -8,13 +9,13 @@ import { receipe } from '../../receipe-model'
 })
 
 export class ReceipeItemComponent {
- 
-  
-  @Input() Receipe : receipe = {name : '', description: '' , image : ''};
- 
-  @Output() clickReceipe = new EventEmitter<receipe>();
 
-  isClick(event: Event){
-    this.clickReceipe.emit(this.Receipe);
+
+  @Input() Receipe : receipe = {name : '', description: '' , image : '' , ingredients:[]};
+
+  constructor(private receipeService : ReceipeService){}
+
+  isClick(){
+    this.receipeService.receipeSelected.emit(this.Receipe);
   }
 }

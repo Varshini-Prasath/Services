@@ -13,29 +13,25 @@ export class ReceipeListComponent {
   constructor(private receipeservice : ReceipeService){};
 
   receipes = this.receipeservice.getReceipes();
-  
-  receipeView : receipe = {name : '', description: '' , image : ''};
- 
+
+  receipeView : receipe = {name : '', description: '' , image : '' , ingredients: []};
+
   @Output() receipeEmitter = new EventEmitter<receipe>();
   // numbers :number[] = [1,2,3,3,4];
   // strings :string[] = ['ss','ss','aa','qq'];
 
-  // receipes2 : receipe[] = 
+  // receipes2 : receipe[] =
   // [
   //   { name : "idly", description : "set", image : "sss" },
   //   { name : "dosai", description : "sew222", image : "s111" },
   //   new receipe("curd rice", "dfs", "")
   // ];
 
-  isClick(clickReceipe:receipe){
-      this.receipeView = clickReceipe;
-      this.receipeEmitter.emit(clickReceipe);
-      
-  }
-  
+
+
   ngOnInit(){}
 
-  
 
-  
+
+
 }

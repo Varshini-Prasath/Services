@@ -2,18 +2,18 @@
     <div class="container-fluid">
         <div class="nav-header">
         <a class="navbar-brand"  href="#" style="color: aqua; font-style: italic;">Receipe Book</a>
-        
+
         <div class="collapse navbar-collapse">
         <ul class = "nav navbar-nav">
-         <li><a href="#" (click)="onClick('Receipe')">Receipe</a></li>    
-         <li><a href="#" (click)="onClick('Shopping')">Shopping List</a></li>
+         <li routerLinkActive="active"><a routerLink="receipeList" >Receipe</a></li>
+         <li  routerLinkActive="active"><a routerLink="shoppingList">Shopping List</a></li>
         </ul>
         <ul class = "nav navbar-nav navbar-right">
             <li class="dropdown" appDropDown >
-            <a href="#" class="dropdown-toggle" role="button" >Manage<span class="caret"></span></a>
+            <a style="cursor:pointer" class="dropdown-toggle" role="button" >Manage<span class="caret"></span></a>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <li><a href="#" class = "dropdown-menu">Fetch Data</a></li>
-                <li><a href="#" class = "dropdown-menu">Save Data</a></li>
+                <li><a  style="cursor:pointer" class = "dropdown-menu">Fetch Data</a></li>
+                <li><a  style="cursor:pointer" class = "dropdown-menu">Save Data</a></li>
             </ul>
             </li>
         </ul>

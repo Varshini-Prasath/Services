@@ -1,5 +1,5 @@
 export class Ingredient{
-    public name : String = "";
+    public name : string = "";
     public amount : number = 0 ;
 
     constructor(name: string , amount : number){

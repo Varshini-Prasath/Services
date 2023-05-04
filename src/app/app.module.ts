@@ -12,6 +12,8 @@ import { HeaderComponent } from './header/header.component';
 import { ReceipeListComponent } from './receipe-book/receipe-list/receipe-list.component';
 import { FormsModule } from '@angular/forms';
 import { DropDownDirective } from './shared/dropDown.directive';
+import { ShoppingListService } from './shopping-list/shopping.service';
+import { ReceipeStartComponent } from './receipe-book/receipe-start/receipe-start.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { DropDownDirective } from './shared/dropDown.directive';
     HeaderComponent,
     ReceipeBookComponent,
     ShoppingListComponent,
-    DropDownDirective
+    DropDownDirective,
+    ReceipeStartComponent
     ],
   imports: [
     BrowserModule,
@@ -31,7 +34,7 @@ import { DropDownDirective } from './shared/dropDown.directive';
     FormsModule
 
   ],
-  providers: [],
+  providers: [ShoppingListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
